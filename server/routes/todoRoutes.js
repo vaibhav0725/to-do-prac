@@ -1,8 +1,9 @@
 const express = require('express');
+const todoController = require('../controllers/todoController');
+
+console.log(todoController); // This will show you the exported object
+
 const router = express.Router();
-const todoController = require('../controllers/todoController'); 
-
-
 
 // GET /api/todos - Get all todos
 router.get('/', todoController.getAllTodos);
