@@ -20,6 +20,7 @@ exports.createTodo = async (req, res) => {
     const newTodo = new Todo({
       title: req.body.title,
       description: req.body.description,
+      completeBy: req.body.completeBy,
     });
 
     const savedTodo = await newTodo.save();
